@@ -1,5 +1,5 @@
 {
-  "name": "esc-pos-encoder",
+  "name": "@rafiul1009/esc-pos-encoder",
   "version": "1.0.0",
   "description": "Create a set of commands that can be send to any receipt printer that supports ESC/POS",
   "main": "src/esc-pos-encoder.js",
