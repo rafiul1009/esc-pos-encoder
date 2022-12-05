@@ -263,6 +263,27 @@ class EscPosEncoder {
   }
 
   /**
+     * Invert text
+     *
+     * @param  {boolean}          value  true to turn on white text on black, false to turn off
+     * @return {object}                  Return the object, for easy chaining commands
+     *
+     */
+  invert(value) {
+    if (typeof value === 'undefined') {
+      value = ! this._state.invert;
+    }
+
+    this._state.invert = value;
+
+    this._queue([
+      0x1d, 0x42, Number(value),
+    ]);
+
+    return this;
+  }
+
+  /**
      * Change text size
      *
      * @param  {string}          value   small or normal

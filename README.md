@@ -315,29 +315,6 @@ Also, you can combine this command with the width command to make the text bigge
         .encode()
 
 
-### Table
-
-Insert a table with multiple columns. The contents of each cell can be a string, or a callback function.
-
-    let result = encoder
-        .table(
-            [
-                { width: 36, marginRight: 2, align: 'left' },
-                { width: 10, align: 'right' }
-            ], 
-            [
-                [ 'Item 1', '€ 10,00' ],
-                [ 'Item 2', '15,00' ],
-                [ 'Item 3', '9,95' ],
-                [ 'Item 4', '4,75' ],
-                [ 'Item 5', '211,05' ],
-                [ '', '='.repeat(10) ],
-                [ 'Total', (encoder) => encoder.bold().text('€ 250,75').bold() ],
-            ]
-        )	
-        .encode()
-
-
 ### Box
 
 Insert a bordered box. The content of the box can be a string, or a callback function.
